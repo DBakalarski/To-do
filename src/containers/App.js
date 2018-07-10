@@ -26,7 +26,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className={style.TodoApp}>
-				<Tittle/>
+				<Title title={'To do list'} number={4} />
 			</div>
 		);
 	}

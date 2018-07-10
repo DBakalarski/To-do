@@ -19,7 +19,9 @@ class TitleName extends React.Component {
 		super(props)
 	}
 	render() {
-		<h1>{props.title}</h1>
+		return(
+			<h1>{this.props.title}</h1>
+		)
 	}
 }
 
@@ -28,7 +30,9 @@ class ToDoNumber extends React.Component {
 		super(props)
 	}
 	render() {
-		<p>Number of to do - {props.number}</p>
+		return (
+			<p>Number of to do - {this.props.number}</p>
+		)
 	}
 }
 
