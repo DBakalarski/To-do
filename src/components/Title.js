@@ -4,7 +4,7 @@ class Title extends React.Component {
 	constructor(props){
 		super(props)
 	}
-	render () {
+	render() {
 		return (
 			<div>
 				<TitleName title={this.props.title} />
