@@ -8,7 +8,7 @@ class Title extends React.Component {
 		return (
 			<div>
 				<TitleName title={this.props.title} />
-				<ToDoNumber number={this.props.number} />
+				<ToDoNumber number={this.props.data.length} />
 			</div>
 		)
 	}

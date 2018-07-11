@@ -1,52 +1,20 @@
 import React from 'react';
-
-
-
-const TodoElements = elements.map(function(elements) {
-	return React.createElement(TodoList, {key: elements.id, text: elements.title})
-})
-
-/*
-const TodoElements = elementData.map(function(elements) {
-	return(
-		<li key={this.props.id} >	
-			{this.props.text}
-		</li>
-	) */
-/*
-	return React.createElement(TodoList, {key: elements.id, title: movie.title, desc: movie.desc, img: movie.img}) 
-}) */
-
+import style from './TodoList.css';
 
 
 
 class TodoList extends React.Component {
 	constructor(props){
-	super(props)
-	}
-	render() {
-		return (
-			<div>
-				<ul>			
-					<TodoElements elements={this.props.elements} />
-				</ul>
-			</div>
-		)
-	}
-}
-
-class TodoElement extends React.Component {
-	constructor(props){
 		super(props)
 	}
 	render() {
 		return(
-			<li key={this.props.id} >	
-				{this.props.text}
-			</li>
+			<ul className={style.TodoList} >
+					{this.props.data.map((todo) => <li key={todo.id}> {todo.text} <a href='#' onClick= {() => this.props.remove(todo.id)}> X </a> </li> )}
+			</ul>
 		)
 	}
-}
+} 
 
 
 export default TodoList;

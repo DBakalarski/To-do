@@ -39,8 +39,8 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className={style.TodoApp}>
-				<Title title={'To do list'} number={4} />
-				<TodoList  elements={data} />
+				<Title title={'To do list'} data={this.state.data} />
+				<TodoList  data={this.state.data} remove={(id) => this.removeTodo(id)} />
 			</div>
 		);
 	}
