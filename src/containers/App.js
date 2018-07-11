@@ -4,6 +4,18 @@ import style from './App.css';
 import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
 
+const elementData =
+	[{
+	id: 1,
+	    text: 'clean room'
+	}, {
+	id: 2,
+	    text: 'wash the dishes'
+	}, {
+	id: 3,
+	    text: 'feed my cat'
+	}]
+
 class App extends React.Component {
 	constructor(props){
 		super(props);
@@ -28,7 +40,7 @@ class App extends React.Component {
 		return (
 			<div className={style.TodoApp}>
 				<Title title={'To do list'} number={4} />
-				<TodoList />
+				<TodoList  text={'tekst'} />
 			</div>
 		);
 	}
