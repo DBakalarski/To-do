@@ -20,7 +20,7 @@ class App extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			data: []
+			data: elementData
 		};
 	}
 	addTodo(val){
@@ -40,7 +40,7 @@ class App extends React.Component {
 		return (
 			<div className={style.TodoApp}>
 				<Title title={'To do list'} number={4} />
-				<TodoList  text={'tekst'} />
+				<TodoList  elements={data} />
 			</div>
 		);
 	}
